@@ -28,7 +28,8 @@
         "nodemon": "^2.0.6",
         "sequelize": "^6.3.5",
         "sequelize-cli": "^6.2.0",
-        "sqlite3": "^5.0.0"
+        "sqlite3": "^5.0.0",
+        "vue": "^2.6.12"
     },
     "devDependencies": {
         "cross-env": "^7.0.2",
