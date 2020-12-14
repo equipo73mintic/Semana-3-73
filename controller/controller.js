@@ -3,8 +3,9 @@ const db = require('../models');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcryptjs');
 
-exports.signin = (req, res) => {
-    db.user.findOne({
+exports.signin = async(req, res) => {
+    
+    await db.user.findOne({
         where: {
             email: req.body.email
         }
