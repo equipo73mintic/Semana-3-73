@@ -41,7 +41,7 @@ exports.signin = async(req, res) => {
         var token = jwt.sign({
             id: user.id, 
             name: user.name, 
-            email: user.mail
+            email: user.email
         }, 
         'config.secret', {
             expiresIn: 86400 //expires in 24 hours
@@ -57,7 +57,7 @@ exports.signin = async(req, res) => {
     });
 }
 
-// Metodo para listar los usuarios ( api/auth )
+// Listar los usuarios ( api/auth )
 exports.list = async (req, res, next) =>{
     try {
         const users = await db.user.findAll();
