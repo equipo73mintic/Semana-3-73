@@ -1,6 +1,7 @@
-const router = require('express').Router();
-const apiRouterUser = require('./api/users.js');
+const router = require('express').Router(); // Manejador de rutas de express
+const apiUserRouter = require('./api/users');
 
-router.use('/auth', apiRouterUser);
+//2nd
+router.use('/auth', apiUserRouter);
 
 module.exports = router;
