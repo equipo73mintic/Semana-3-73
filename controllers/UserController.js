@@ -115,7 +115,7 @@ exports.query = async(req, res, next) =>{
         const user = await db.user.findOne({ where: { id: req.query.id } });
         if (!user) {
             res.status(404).send({
-                message: 'El registro no existe'
+                message: 'El registro solicitado no existe'
             });
         } else {
             res.status(200).json( user );
